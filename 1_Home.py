@@ -449,6 +449,7 @@ def process_object_detection(yolo_model):
 
 # Enhanced recommendations section
 def display_recommendations(filenames):
+    print(filenames)
     with st.container():
         st.markdown("""
         <div class="card fade-in">
@@ -546,5 +547,5 @@ def main():
         process_main_flow(yolo_model, resnet_model, feature_list, filenames)
 
 if __name__ == "__main__":
-    print(os.listdir("Livingroom"))
+    # print(os.listdir("Livingroom"))
     main()
