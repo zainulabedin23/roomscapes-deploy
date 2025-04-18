@@ -1,0 +1,6 @@
+[theme]
+base="light"
+primaryColor="#8e8c8c"
+
+[multipage]
+show_navigation = false
