@@ -449,8 +449,9 @@ def process_object_detection(yolo_model):
 
 # Enhanced recommendations section
 def display_recommendations(filenames):
-    print(filenames)
+    # print(filenames)
     filenames=[path.replace('\\', '/') for path in filenames]
+    print(filenames)
     with st.container():
         st.markdown("""
         <div class="card fade-in">
@@ -481,7 +482,9 @@ def display_recommendations(filenames):
         st.markdown("</div>", unsafe_allow_html=True)
 
 def handle_recommendations(resnet_model, feature_list, filenames):
-    
+    print("inside handle reommendation")
+    filenames=[path.replace('\\', '/') for path in filenames]
+    print(filenames)
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
         button_disabled = st.session_state.uploaded_file_path is None
@@ -507,6 +510,7 @@ def handle_recommendations(resnet_model, feature_list, filenames):
         display_recommendations(filenames) 
 
 def process_main_flow(yolo_model, resnet_model, feature_list, filenames):
+
     handle_file_upload()
     if st.session_state.uploaded_file_path:
         display_image_columns(yolo_model)
