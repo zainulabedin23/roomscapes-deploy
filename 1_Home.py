@@ -479,6 +479,7 @@ def display_recommendations(filenames):
         st.markdown("</div>", unsafe_allow_html=True)
 
 def handle_recommendations(resnet_model, feature_list, filenames):
+    
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
         button_disabled = st.session_state.uploaded_file_path is None
@@ -545,4 +546,5 @@ def main():
         process_main_flow(yolo_model, resnet_model, feature_list, filenames)
 
 if __name__ == "__main__":
+    print(os.listdir("Livingroom"))
     main()
