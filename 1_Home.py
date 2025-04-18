@@ -450,6 +450,7 @@ def process_object_detection(yolo_model):
 # Enhanced recommendations section
 def display_recommendations(filenames):
     print(filenames)
+    filenames=[path.replace('\\', '/') for path in filenames]
     with st.container():
         st.markdown("""
         <div class="card fade-in">
