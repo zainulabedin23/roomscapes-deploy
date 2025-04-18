@@ -6,3 +6,4 @@ tqdm
 pandas
 scikit-learn  # common with ML workflows
 opencv-python 
+ultralytics==8.3.27
