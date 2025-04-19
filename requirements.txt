@@ -76,6 +76,5 @@ python-dotenv==1.0.1
 python-nvd3==0.16.0
 pytube==15.0.0
 pytz==2022.7
-pywin32==304
 pyzmq==24.0.1
 
